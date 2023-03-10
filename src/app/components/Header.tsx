@@ -3,6 +3,7 @@ import MenuItem from "../components/MenuItem";
 import { AiFillHome } from "react-icons/ai";
 import { AiFillInfoCircle } from "react-icons/ai";
 import Link from "next/link";
+import DarkLightSwitch from "./DarkLightSwitch";
 
 export default function Header() {
   return (
@@ -15,7 +16,8 @@ export default function Header() {
           Icon={AiFillInfoCircle}
         ></MenuItem>
       </div>
-      <div>
+      <div className="flex items-center space-x-5">
+        <DarkLightSwitch></DarkLightSwitch>
         <Link href="/" className="text-2xl">
           <h2>
             <span className="font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1">
