@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "./components/Header";
 import ThemeProviderComponent from "./components/ThemeProviderComponent";
+import NavBar from "./components/NavBar";
 
 export const metadata = {
   title: "IMBD",
@@ -17,7 +18,7 @@ export default function RootLayout({
       <body>
         <ThemeProviderComponent>
           <Header></Header>
-
+          <NavBar></NavBar>
           {children}
         </ThemeProviderComponent>
       </body>
