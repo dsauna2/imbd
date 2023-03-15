@@ -21,10 +21,6 @@ export default async function Home({ searchParams }: HomeProps) {
     { next: { revalidate: 10000 } }
   );
 
-  if (!res.ok) {
-    throw new Error("error validationg");
-  }
-
   const data = await res.json();
 
   return (
