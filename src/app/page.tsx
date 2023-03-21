@@ -24,8 +24,8 @@ export default async function Home({ searchParams }: HomeProps) {
   const data = await res.json();
 
   return (
-    <h1 className="text-red-400">
+    <div className="mt-3">
       <Results results={data.results} />
-    </h1>
+    </div>
   );
 }
