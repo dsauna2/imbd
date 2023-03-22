@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import ThemeProviderComponent from "./components/ThemeProviderComponent";
 import NavBar from "./components/NavBar";
+import SearchBox from "./components/SearchBox";
 
 export const metadata = {
   title: "IMBD",
@@ -17,8 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProviderComponent>
-          <Header></Header>
-          <NavBar></NavBar>
+          <Header />
+          <NavBar />
+          <SearchBox />
           {children}
         </ThemeProviderComponent>
       </body>

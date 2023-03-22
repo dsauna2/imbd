@@ -11,7 +11,7 @@ export default async function page({ params }) {
   const result = await movie.json();
   return (
     <div className="w-full">
-      <div className="max-w-6xl flex mx-auto mt-5 sm:flex-col md:flex-row items-center content-center md:space-x-6">
+      <div className="max-w-6xl flex mx-auto mt-5 sm:flex-col md:flex-row items-top content-center md:space-x-6">
         <Image
           className="group-hover:opacity-80 transition-opacity duration-200"
           placeholder="blur"
@@ -24,7 +24,7 @@ export default async function page({ params }) {
         <div>
           <h2 className="text-xl mb-2 text-amber-600">{result.title}</h2>
           <p className="mb-2">{result.overview}</p>
-          <p className="mb-2">Revenue: ${result.revenue}</p>
+          <p className="mb-2">evenue: ${result.revenue}</p>
           <p>Budget: ${result.budget}</p>
         </div>
       </div>
