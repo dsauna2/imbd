@@ -1,8 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import type { NextPage } from "next";
 
 const API_KEY = process.env.API_KEY;
 
+function formatNumber(number: number) {
+  if (number >= 1000000) {
+    return Math.round(number / 1000000) + "m";
+  } else if (number >= 1000) {
+    return Math.round(number / 1000) + "k";
+  } else {
+    return number;
+  }
+}
+
+//@ts-ignore
 export default async function page({ params }) {
   const movieId = params.id;
   const movie = await fetch(
@@ -24,8 +36,12 @@ export default async function page({ params }) {
         <div>
           <h2 className="text-xl mb-2 text-amber-600">{result.title}</h2>
           <p className="mb-2">{result.overview}</p>
-          <p className="mb-2">evenue: ${result.revenue}</p>
-          <p>Budget: ${result.budget}</p>
+          <p className=" text-green-600">
+            Revenue: ${formatNumber(result.revenue)}
+          </p>
+          <p className="text- text-red-400">
+            Budget: ${formatNumber(result.budget)}
+          </p>
         </div>
       </div>
     </div>

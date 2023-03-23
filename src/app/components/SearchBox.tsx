@@ -1,18 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 
 export default function SearchBox() {
   const [search, setSearch] = useState("");
   const router = useRouter();
-  const setSumbit = (e) => {
+  const setSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     router.push(`/search/${search}`);
   };
   return (
     <div>
       <form
-        onSubmit={(e) => setSumbit(e)}
+        onSubmit={(e) => setSubmit(e)}
         className="flex max-w-6xl mx-auto my-4 justify-between"
       >
         <input

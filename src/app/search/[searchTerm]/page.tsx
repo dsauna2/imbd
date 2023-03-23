@@ -1,6 +1,6 @@
 import Results from "@/app/components/Results";
 import React from "react";
-
+//@ts-ignore
 export default async function SearchPage({ params }) {
   const searchTerm = params.searchTerm;
   const movieRaw = await fetch(
@@ -10,7 +10,7 @@ export default async function SearchPage({ params }) {
   return (
     <div>
       {movies.results && movies.results.length > 0 && <>No results Found</>}
-      {movies && <Results results={movies} />}
+      {movies && <Results results={movies.results} />}
     </div>
   );
 }

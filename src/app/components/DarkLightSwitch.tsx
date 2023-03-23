@@ -5,7 +5,7 @@ import { MdDarkMode } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-function DarkLightSwitch(props) {
+function DarkLightSwitch() {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const currentTheme = theme === "system" ? systemTheme : theme;

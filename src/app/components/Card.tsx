@@ -20,7 +20,7 @@ export default function Card({ result }: ResultType) {
           height="300"
           src={`https://image.tmdb.org/t/p/w500/${result.backdrop_path}`}
         ></Image>
-        <h2 className="my-2 text-amber-500">{result.title}</h2>
+        <h2 className="my-2">{result.title}</h2>
         <p className="line-clamp-3 text-sm my-3">{result.overview}</p>
       </Link>
     </div>
